@@ -28,7 +28,8 @@ pipeline {
 
         stage('Parallel') {
           steps {
-            echo 'hello'
+            bat 'mvn clean install'
+            echo 'Build Success!'
           }
         }
 
