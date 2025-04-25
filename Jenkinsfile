@@ -21,6 +21,8 @@ pipeline {
         echo 'new branch!'
         bat 'echo hello'
         bat 'echo %Name%'
+        sh '''echo "hello! sh"
+'''
       }
     }
 
