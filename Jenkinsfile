@@ -5,7 +5,6 @@ pipeline {
       steps {
         echo 'Bees Buzz!'
         echo 'Fuck!'
-        sh 'echo "wook"'
       }
     }
 
@@ -20,7 +19,7 @@ pipeline {
       steps {
         echo 'hello wook'
         echo 'new branch!'
-        sh 'echo "I am a ${Name}"'
+        bat 'echo "I am a ${Name}"'
       }
     }
 
