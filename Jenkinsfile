@@ -20,9 +20,7 @@ pipeline {
         echo 'hello wook'
         echo 'new branch!'
         bat 'echo hello'
-        bat 'SET PATH=PATH;"C:\\Program Files\\Git\\bin"'
-        sh '''echo \'hello! wook\'
-'''
+        bat 'echo %Name%'
       }
     }
 
