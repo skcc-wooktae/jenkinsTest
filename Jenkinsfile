@@ -17,7 +17,7 @@ pipeline {
 
     stage('Lets go') {
       parallel {
-        stage('Lets go') {
+        stage('chaging') {
           steps {
             echo 'hello wook'
             echo 'new branch!'
