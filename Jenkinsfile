@@ -20,6 +20,7 @@ pipeline {
         echo 'hello wook'
         echo 'new branch!'
         bat 'echo hello'
+        bat 'echo "${name}"'
       }
     }
 
