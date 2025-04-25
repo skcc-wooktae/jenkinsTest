@@ -5,6 +5,7 @@ pipeline {
       steps {
         echo 'Bees Buzz!'
         echo 'Fuck!'
+        sh 'echo "wook"'
       }
     }
 
