@@ -15,5 +15,11 @@ pipeline {
       }
     }
 
+    stage('Lets go') {
+      steps {
+        echo 'hello wook'
+      }
+    }
+
   }
 }
