@@ -19,7 +19,8 @@ pipeline {
       steps {
         echo 'hello wook'
         echo 'new branch!'
-        bat 'echo "I am a ${Name}"'
+        sh '''echo "hello ${Name}"
+'''
       }
     }
 
