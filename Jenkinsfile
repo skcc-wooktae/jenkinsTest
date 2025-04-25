@@ -19,8 +19,12 @@ pipeline {
       steps {
         echo 'hello wook'
         echo 'new branch!'
+        sh 'echo "I am a ${Name}"'
       }
     }
 
+  }
+  environment {
+    Name = 'wooktae!'
   }
 }
