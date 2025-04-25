@@ -16,11 +16,22 @@ pipeline {
     }
 
     stage('Lets go') {
-      steps {
-        echo 'hello wook'
-        echo 'new branch!'
-        bat 'echo hello'
-        bat 'echo %Name%'
+      parallel {
+        stage('Lets go') {
+          steps {
+            echo 'hello wook'
+            echo 'new branch!'
+            bat 'echo hello'
+            bat 'echo %Name%'
+          }
+        }
+
+        stage('Parallel') {
+          steps {
+            echo 'hello'
+          }
+        }
+
       }
     }
 
