@@ -19,8 +19,6 @@ pipeline {
       steps {
         echo 'hello wook'
         echo 'new branch!'
-        sh '''echo "hello ${Name}"
-'''
       }
     }
 
