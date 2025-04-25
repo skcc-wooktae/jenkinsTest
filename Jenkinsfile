@@ -18,6 +18,7 @@ pipeline {
     stage('Lets go') {
       steps {
         echo 'hello wook'
+        echo 'new branch!'
       }
     }
 
