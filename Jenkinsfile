@@ -21,7 +21,7 @@ pipeline {
         echo 'new branch!'
         bat 'echo hello'
         bat 'SET PATH=PATH;"C:\\Program Files\\Git\\bin"'
-        sh '''echo "hello! sh"
+        sh '''echo \'hello! wook\'
 '''
       }
     }
