@@ -66,6 +66,18 @@ pipeline {
       }
     }
 
+    stage('execute java') {
+      agent {
+        node {
+          label 'jdk11'
+        }
+
+      }
+      steps {
+        bat 'java -jar firstproject-0.0.1-SNAPSHOT.war'
+      }
+    }
+
   }
   environment {
     Name = 'wooktae!'
