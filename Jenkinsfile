@@ -1,7 +1,13 @@
 pipeline {
-  agent any
+  agent none
   stages {
     stage('Buzz Buzz') {
+      agent {
+        node {
+          label 'jdk11'
+        }
+
+      }
       steps {
         echo 'Bees Buzz!'
         echo 'Fuck!'
@@ -9,6 +15,12 @@ pipeline {
     }
 
     stage('Bees Bees') {
+      agent {
+        node {
+          label 'jdk21'
+        }
+
+      }
       steps {
         echo ' Buzz, Bees, Buzz!'
         echo 'tired..'
@@ -18,6 +30,7 @@ pipeline {
     stage('Lets go') {
       parallel {
         stage('chaging') {
+          agent any
           steps {
             echo 'hello wook'
             echo 'new branch!'
@@ -27,6 +40,7 @@ pipeline {
         }
 
         stage('Parallel') {
+          agent any
           steps {
             bat 'mvn clean install'
             echo 'Build Success!'
