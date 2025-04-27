@@ -30,7 +30,12 @@ pipeline {
     stage('Lets go') {
       parallel {
         stage('chaging') {
-          agent any
+          agent {
+            node {
+              label 'jdk11'
+            }
+
+          }
           steps {
             echo 'hello wook'
             echo 'new branch!'
@@ -40,13 +45,24 @@ pipeline {
         }
 
         stage('Parallel') {
-          agent any
+          agent {
+            node {
+              label 'jdk11'
+            }
+
+          }
           steps {
             bat 'mvn clean install'
             echo 'Build Success!'
           }
         }
 
+      }
+    }
+
+    stage('stage input') {
+      steps {
+        input(message: 'deploy?', ok: 'yes')
       }
     }
 
